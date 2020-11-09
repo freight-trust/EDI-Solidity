@@ -1,0 +1,6 @@
+[submodule "xs3p-1"]
+	path = xs3p-1
+	url = https://github.com/sambacha/xs3p-1
+[submodule "xs3p"]
+	path = xs3p
+	url = https://github.com/sambacha/xs3p
