@@ -1,0 +1,132 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "AmountType": {
+            "type": "object"
+        },
+        "BinaryObjectType": {
+            "type": "object"
+        },
+        "CodeType": {
+            "type": "object"
+        },
+        "DateTimeType": {
+            "type": "object"
+        },
+        "DateType": {
+            "type": "object"
+        },
+        "GraphicType": {
+            "type": "object"
+        },
+        "IDType": {
+            "type": "object"
+        },
+        "IndicatorType": {
+            "type": "object"
+        },
+        "MeasureType": {
+            "type": "object"
+        },
+        "NameType": {
+            "type": "object"
+        },
+        "NumericType": {
+            "type": "object"
+        },
+        "PercentType": {
+            "type": "object"
+        },
+        "PictureType": {
+            "type": "object"
+        },
+        "QuantityType": {
+            "type": "object"
+        },
+        "RateType": {
+            "type": "object"
+        },
+        "SoundType": {
+            "type": "object"
+        },
+        "TextType": {
+            "type": "object"
+        },
+        "TimeType": {
+            "type": "object"
+        },
+        "UnqualifiedDataType_27p0": {
+            "description": "*********\ngenerated template classes for ./UnqualifiedDataType_27p0.xsd 11/11/2020, 12:45:41 PM\n*********",
+            "properties": {
+                "amountType": {
+                    "$ref": "#/definitions/AmountType"
+                },
+                "binaryObjectType": {
+                    "$ref": "#/definitions/BinaryObjectType"
+                },
+                "codeType": {
+                    "$ref": "#/definitions/CodeType"
+                },
+                "dateTimeType": {
+                    "$ref": "#/definitions/DateTimeType"
+                },
+                "dateType": {
+                    "$ref": "#/definitions/DateType"
+                },
+                "graphicType": {
+                    "$ref": "#/definitions/GraphicType"
+                },
+                "iDType": {
+                    "$ref": "#/definitions/IDType"
+                },
+                "indicatorType": {
+                    "$ref": "#/definitions/IndicatorType"
+                },
+                "measureType": {
+                    "$ref": "#/definitions/MeasureType"
+                },
+                "nameType": {
+                    "$ref": "#/definitions/NameType"
+                },
+                "numericType": {
+                    "$ref": "#/definitions/NumericType"
+                },
+                "percentType": {
+                    "$ref": "#/definitions/PercentType"
+                },
+                "pictureType": {
+                    "$ref": "#/definitions/PictureType"
+                },
+                "quantityType": {
+                    "$ref": "#/definitions/QuantityType"
+                },
+                "rateType": {
+                    "$ref": "#/definitions/RateType"
+                },
+                "soundType": {
+                    "$ref": "#/definitions/SoundType"
+                },
+                "textType": {
+                    "$ref": "#/definitions/TextType"
+                },
+                "timeType": {
+                    "$ref": "#/definitions/TimeType"
+                },
+                "valueType": {
+                    "$ref": "#/definitions/ValueType"
+                },
+                "videoType": {
+                    "$ref": "#/definitions/VideoType"
+                }
+            },
+            "type": "object"
+        },
+        "ValueType": {
+            "type": "object"
+        },
+        "VideoType": {
+            "type": "object"
+        }
+    }
+}
+

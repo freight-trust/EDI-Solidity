@@ -1,2 +1,6 @@
 import {generateTemplateClassesFromXSD} from "xsd2ts";
-generateTemplateClassesFromXSD('./EDISchema-v4.xsd');
+generateTemplateClassesFromXSD('./QualifiedDataType_27p0.xsd');
+
+//generateTemplateClassesFromXSD('./Acknowledgement_23p0.xsd', {udt, './UnqualifiedDataType_27p0.xsd'}defaultns);, 
+//generateTemplateClassesFromXSD('./Acknowledgement_23p0.xsd', {ram, './ReusableAggregateBusinessInformationEntity_27p0.xsd'}defaultns);
+// generateTemplateClassesFromXSD('./Acknowledgement_23p0.xsd', {qdt, './QualifiedDataType_27p0.xsd'},defaultns);

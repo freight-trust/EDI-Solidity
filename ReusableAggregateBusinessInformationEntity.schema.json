@@ -1,0 +1,291 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "AnyElementType": {
+            "type": "object"
+        },
+        "BaseType": {
+            "properties": {
+                "description": {
+                }
+            },
+            "type": "object"
+        },
+        "CompositeImpl": {
+            "properties": {
+                "sequence": {
+                    "items": {
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "CompositeStandard": {
+            "type": "object"
+        },
+        "CompositeType": {
+            "type": "object"
+        },
+        "ControlType": {
+            "type": "object"
+        },
+        "EDISchema_v4": {
+            "properties": {
+                "anyElementType": {
+                    "$ref": "#/definitions/AnyElementType"
+                },
+                "baseType": {
+                    "$ref": "#/definitions/BaseType"
+                },
+                "compositeImpl": {
+                    "$ref": "#/definitions/CompositeImpl"
+                },
+                "compositeStandard": {
+                    "$ref": "#/definitions/CompositeStandard"
+                },
+                "compositeType": {
+                    "$ref": "#/definitions/CompositeType"
+                },
+                "controlType": {
+                    "$ref": "#/definitions/ControlType"
+                },
+                "elementBaseType": {
+                    "$ref": "#/definitions/elementBaseType"
+                },
+                "elementImpl": {
+                    "$ref": "#/definitions/ElementImpl"
+                },
+                "elementStandard": {
+                    "$ref": "#/definitions/ElementStandard"
+                },
+                "elementType": {
+                    "$ref": "#/definitions/ElementType"
+                },
+                "enumeration": {
+                    "$ref": "#/definitions/Enumeration"
+                },
+                "groupControlType": {
+                    "$ref": "#/definitions/GroupControlType"
+                },
+                "implementation": {
+                    "$ref": "#/definitions/Implementation"
+                },
+                "include": {
+                    "$ref": "#/definitions/Include"
+                },
+                "interchange": {
+                    "$ref": "#/definitions/Interchange"
+                },
+                "loopBase": {
+                    "$ref": "#/definitions/LoopBase"
+                },
+                "loopImpl": {
+                    "$ref": "#/definitions/LoopImpl"
+                },
+                "loopStandard": {
+                    "$ref": "#/definitions/LoopStandard"
+                },
+                "schema": {
+                    "$ref": "#/definitions/Schema"
+                },
+                "segmentImpl": {
+                    "$ref": "#/definitions/SegmentImpl"
+                },
+                "segmentStandard": {
+                    "$ref": "#/definitions/SegmentStandard"
+                },
+                "segmentType": {
+                    "$ref": "#/definitions/SegmentType"
+                },
+                "syntax": {
+                    "$ref": "#/definitions/Syntax"
+                },
+                "syntaxType": {
+                    "$ref": "#/definitions/syntaxType"
+                },
+                "transaction": {
+                    "$ref": "#/definitions/Transaction"
+                },
+                "transactionControlType": {
+                    "$ref": "#/definitions/TransactionControlType"
+                },
+                "useType": {
+                    "$ref": "#/definitions/useType"
+                }
+            },
+            "type": "object"
+        },
+        "ElementImpl": {
+            "properties": {
+                "enumeration": {
+                }
+            },
+            "type": "object"
+        },
+        "ElementStandard": {
+            "type": "object"
+        },
+        "ElementType": {
+            "type": "object"
+        },
+        "Enumeration": {
+            "type": "object"
+        },
+        "GroupControlType": {
+            "properties": {
+                "transaction": {
+                }
+            },
+            "type": "object"
+        },
+        "Implementation": {
+            "type": "object"
+        },
+        "Include": {
+            "properties": {
+                "schemaLocation": {
+                }
+            },
+            "type": "object"
+        },
+        "Interchange": {
+            "type": "object"
+        },
+        "LoopBase": {
+            "type": "object"
+        },
+        "LoopImpl": {
+            "type": "object"
+        },
+        "LoopStandard": {
+            "properties": {
+                "syntax": {
+                    "items": {
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "Schema": {
+            "properties": {
+                "include": {
+                    "items": {
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "SegmentImpl": {
+            "properties": {
+                "sequence": {
+                    "$ref": "#/definitions/Sequence"
+                }
+            },
+            "type": "object"
+        },
+        "SegmentStandard": {
+            "type": "object"
+        },
+        "SegmentType": {
+            "type": "object"
+        },
+        "Sequence": {
+            "type": "object"
+        },
+        "Syntax": {
+            "properties": {
+                "position": {
+                    "items": {
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "Transaction": {
+            "type": "object"
+        },
+        "TransactionControlType": {
+            "type": "object"
+        },
+        "elementBaseType": {
+            "enum": [
+                "binary",
+                "date",
+                "decimal",
+                "identifier",
+                "numeric",
+                "string",
+                "time"
+            ],
+            "type": "string"
+        },
+        "implementationAttributeGroup": {
+            "properties": {
+                "maxOccurs": {
+                },
+                "minOccurs": {
+                }
+            },
+            "type": "object"
+        },
+        "lengthAttributeGroup": {
+            "properties": {
+                "maxLength": {
+                },
+                "minLength": {
+                }
+            },
+            "type": "object"
+        },
+        "occursAttributeGroup": {
+            "properties": {
+                "maxOccurs": {
+                },
+                "minOccurs": {
+                }
+            },
+            "type": "object"
+        },
+        "referenceAttributeGroup": {
+            "properties": {
+                "type": {
+                }
+            },
+            "type": "object"
+        },
+        "syntaxType": {
+            "enum": [
+                "conditional",
+                "exclusion",
+                "firstonly",
+                "list",
+                "paired",
+                "required",
+                "single"
+            ],
+            "type": "string"
+        },
+        "useType": {
+            "enum": [
+                "optional",
+                "prohibited",
+                "required"
+            ],
+            "type": "string"
+        },
+        "versionAttributeGroup": {
+            "properties": {
+                "maxVersion": {
+                },
+                "minVersion": {
+                }
+            },
+            "type": "object"
+        }
+    }
+}
+

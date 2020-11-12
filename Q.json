@@ -1,0 +1,864 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "AccessRightsTypeCodeType": {
+            "type": "object"
+        },
+        "AccountingAccountBalanceReopeningTypeCodeType": {
+            "type": "object"
+        },
+        "AccountingAccountClassificationCodeType": {
+            "type": "object"
+        },
+        "AccountingAccountNatureTypeCodeType": {
+            "type": "object"
+        },
+        "AccountingAccountStatusCodeType": {
+            "type": "object"
+        },
+        "AccountingAccountTypeCodeType": {
+            "type": "object"
+        },
+        "AccountingAmountQualifierCodeType": {
+            "type": "object"
+        },
+        "AccountingAmountTypeCodeType": {
+            "type": "object"
+        },
+        "AccountingContactCodeType": {
+            "type": "object"
+        },
+        "AccountingDebitCreditStatusCodeType": {
+            "type": "object"
+        },
+        "AccountingDocumentCodeType": {
+            "type": "object"
+        },
+        "AccountingDocumentTypeCodeType": {
+            "type": "object"
+        },
+        "AccountingEntryCategoryCodeType": {
+            "type": "object"
+        },
+        "AccountingEntryLineCategoryCodeType": {
+            "type": "object"
+        },
+        "AccountingEntryLineSourceCodeType": {
+            "type": "object"
+        },
+        "AccountingEntryProcessingCodeType": {
+            "type": "object"
+        },
+        "AccountingJournalCategoryCodeType": {
+            "type": "object"
+        },
+        "AccountingJournalCodeType": {
+            "type": "object"
+        },
+        "AccountingPeriodFunctionCodeType": {
+            "type": "object"
+        },
+        "AccountingPerquisiteCodeType": {
+            "type": "object"
+        },
+        "AccountingVoucherMediumCodeType": {
+            "type": "object"
+        },
+        "AcknowledgementCodeType": {
+            "type": "object"
+        },
+        "AdditionalPostponementCodeType": {
+            "type": "object"
+        },
+        "AddressFormatTypeCodeType": {
+            "type": "object"
+        },
+        "AddressTypeCodeType": {
+            "type": "object"
+        },
+        "AdjustmentReasonCodeType": {
+            "type": "object"
+        },
+        "AirFlowUnitMeasureType": {
+            "type": "object"
+        },
+        "AllowanceChargeIdentificationCodeType": {
+            "type": "object"
+        },
+        "AllowanceChargeReasonCodeType": {
+            "type": "object"
+        },
+        "AlternateCurrencyAmountTypeCodeType": {
+            "type": "object"
+        },
+        "AmortizationMethodCodeType": {
+            "type": "object"
+        },
+        "AmountWeightTypeCodeType": {
+            "type": "object"
+        },
+        "AutomaticDataCaptureMethodCodeType": {
+            "type": "object"
+        },
+        "BinaryObjectCharacterSetCodeType": {
+            "type": "object"
+        },
+        "BinaryObjectEncodingCodeType": {
+            "type": "object"
+        },
+        "CargoCategoryCodeType": {
+            "type": "object"
+        },
+        "CargoCommodityCategoryCodeType": {
+            "type": "object"
+        },
+        "CargoOperationalCategoryCodeType": {
+            "type": "object"
+        },
+        "CargoTypeClassificationCodeType": {
+            "type": "object"
+        },
+        "CashAccountTypeCodeType": {
+            "type": "object"
+        },
+        "CertificateTypeCodeType": {
+            "type": "object"
+        },
+        "ChargePayingPartyRoleCodeType": {
+            "type": "object"
+        },
+        "CodeListResponsibleAgencyCodeType": {
+            "type": "object"
+        },
+        "CommitmentLevelCodeType": {
+            "type": "object"
+        },
+        "CommunicationChannelCodeType": {
+            "type": "object"
+        },
+        "ContactTypeCodeType": {
+            "type": "object"
+        },
+        "ContractTypeCodeType": {
+            "type": "object"
+        },
+        "ContractorTypeCodeType": {
+            "type": "object"
+        },
+        "CostManagementCodeType": {
+            "type": "object"
+        },
+        "CostReportingCodeType": {
+            "type": "object"
+        },
+        "CountryIDType": {
+            "type": "object"
+        },
+        "CurrencyCodeType": {
+            "type": "object"
+        },
+        "DangerousGoodsPackagingLevelCodeType": {
+            "type": "object"
+        },
+        "DangerousGoodsRegulationCodeType": {
+            "type": "object"
+        },
+        "DeliveryTermsCodeType": {
+            "type": "object"
+        },
+        "DimensionTypeCodeType": {
+            "type": "object"
+        },
+        "DocumentCodeType": {
+            "type": "object"
+        },
+        "DocumentStatusCodeType": {
+            "type": "object"
+        },
+        "DurationUnitMeasureType": {
+            "type": "object"
+        },
+        "EarnedValueCalculationMethodCodeType": {
+            "type": "object"
+        },
+        "FileSizeUnitMeasureType": {
+            "type": "object"
+        },
+        "FinancialAccountTypeCodeType": {
+            "type": "object"
+        },
+        "FinancialAdjustmentReasonCodeType": {
+            "type": "object"
+        },
+        "FinancialInstitutionRoleCodeType": {
+            "type": "object"
+        },
+        "FinancingStatusCodeType": {
+            "type": "object"
+        },
+        "FinancingStatusReasonCodeType": {
+            "type": "object"
+        },
+        "FormattedDateTimeType": {
+            "type": "object"
+        },
+        "FreightChargeTariffClassCodeType": {
+            "type": "object"
+        },
+        "FreightChargeTypeIDType": {
+            "type": "object"
+        },
+        "FundingTypeCodeType": {
+            "type": "object"
+        },
+        "GoodsTypeCodeType": {
+            "type": "object"
+        },
+        "GoodsTypeExtensionCodeType": {
+            "type": "object"
+        },
+        "GovernmentActionCodeType": {
+            "type": "object"
+        },
+        "HierarchicalStructureTypeCodeType": {
+            "type": "object"
+        },
+        "InvoiceDocumentCodeType": {
+            "type": "object"
+        },
+        "LanguageCodeType": {
+            "type": "object"
+        },
+        "LifetimeEndCostCodeType": {
+            "type": "object"
+        },
+        "LineStatusCodeType": {
+            "type": "object"
+        },
+        "LinearUnitMeasureType": {
+            "type": "object"
+        },
+        "LocationFunctionCodeType": {
+            "type": "object"
+        },
+        "LogisticsChargeCalculationBasisCodeType": {
+            "type": "object"
+        },
+        "MIMECodeType": {
+            "type": "object"
+        },
+        "MarkingInstructionCodeType": {
+            "type": "object"
+        },
+        "MeasuredAttributeCodeType": {
+            "type": "object"
+        },
+        "MessageFunctionCodeType": {
+            "type": "object"
+        },
+        "OrganizationFunctionTypeCodeType": {
+            "type": "object"
+        },
+        "PackageTypeCodeType": {
+            "type": "object"
+        },
+        "PackagingLevelCodeType": {
+            "type": "object"
+        },
+        "PackagingMarkingCodeType": {
+            "type": "object"
+        },
+        "PartyRoleCodeType": {
+            "type": "object"
+        },
+        "PartyTypeCodeType": {
+            "type": "object"
+        },
+        "PaymentGuaranteeMeansCodeType": {
+            "type": "object"
+        },
+        "PaymentMeansChannelCodeType": {
+            "type": "object"
+        },
+        "PaymentMeansCodeType": {
+            "type": "object"
+        },
+        "PaymentMethodCodeType": {
+            "type": "object"
+        },
+        "PaymentTermsEventTimeReferenceCodeType": {
+            "type": "object"
+        },
+        "PaymentTermsIDType": {
+            "type": "object"
+        },
+        "PaymentTermsTypeCodeType": {
+            "type": "object"
+        },
+        "PlanningLevelCodeType": {
+            "type": "object"
+        },
+        "PriceTypeCodeType": {
+            "type": "object"
+        },
+        "PriorityDescriptionCodeType": {
+            "type": "object"
+        },
+        "ProcessTypeCodeType": {
+            "type": "object"
+        },
+        "ProjectTypeCodeType": {
+            "type": "object"
+        },
+        "QualifiedDataType_27p0": {
+            "description": "*********\ngenerated template classes for ./QualifiedDataType_27p0.xsd 11/11/2020, 12:48:15 PM\n*********",
+            "properties": {
+                "accessRightsTypeCodeType": {
+                    "$ref": "#/definitions/AccessRightsTypeCodeType"
+                },
+                "accountingAccountBalanceReopeningTypeCodeType": {
+                    "$ref": "#/definitions/AccountingAccountBalanceReopeningTypeCodeType"
+                },
+                "accountingAccountClassificationCodeType": {
+                    "$ref": "#/definitions/AccountingAccountClassificationCodeType"
+                },
+                "accountingAccountNatureTypeCodeType": {
+                    "$ref": "#/definitions/AccountingAccountNatureTypeCodeType"
+                },
+                "accountingAccountStatusCodeType": {
+                    "$ref": "#/definitions/AccountingAccountStatusCodeType"
+                },
+                "accountingAccountTypeCodeType": {
+                    "$ref": "#/definitions/AccountingAccountTypeCodeType"
+                },
+                "accountingAmountQualifierCodeType": {
+                    "$ref": "#/definitions/AccountingAmountQualifierCodeType"
+                },
+                "accountingAmountTypeCodeType": {
+                    "$ref": "#/definitions/AccountingAmountTypeCodeType"
+                },
+                "accountingContactCodeType": {
+                    "$ref": "#/definitions/AccountingContactCodeType"
+                },
+                "accountingDebitCreditStatusCodeType": {
+                    "$ref": "#/definitions/AccountingDebitCreditStatusCodeType"
+                },
+                "accountingDocumentCodeType": {
+                    "$ref": "#/definitions/AccountingDocumentCodeType"
+                },
+                "accountingDocumentTypeCodeType": {
+                    "$ref": "#/definitions/AccountingDocumentTypeCodeType"
+                },
+                "accountingEntryCategoryCodeType": {
+                    "$ref": "#/definitions/AccountingEntryCategoryCodeType"
+                },
+                "accountingEntryLineCategoryCodeType": {
+                    "$ref": "#/definitions/AccountingEntryLineCategoryCodeType"
+                },
+                "accountingEntryLineSourceCodeType": {
+                    "$ref": "#/definitions/AccountingEntryLineSourceCodeType"
+                },
+                "accountingEntryProcessingCodeType": {
+                    "$ref": "#/definitions/AccountingEntryProcessingCodeType"
+                },
+                "accountingJournalCategoryCodeType": {
+                    "$ref": "#/definitions/AccountingJournalCategoryCodeType"
+                },
+                "accountingJournalCodeType": {
+                    "$ref": "#/definitions/AccountingJournalCodeType"
+                },
+                "accountingPeriodFunctionCodeType": {
+                    "$ref": "#/definitions/AccountingPeriodFunctionCodeType"
+                },
+                "accountingPerquisiteCodeType": {
+                    "$ref": "#/definitions/AccountingPerquisiteCodeType"
+                },
+                "accountingVoucherMediumCodeType": {
+                    "$ref": "#/definitions/AccountingVoucherMediumCodeType"
+                },
+                "acknowledgementCodeType": {
+                    "$ref": "#/definitions/AcknowledgementCodeType"
+                },
+                "additionalPostponementCodeType": {
+                    "$ref": "#/definitions/AdditionalPostponementCodeType"
+                },
+                "addressFormatTypeCodeType": {
+                    "$ref": "#/definitions/AddressFormatTypeCodeType"
+                },
+                "addressTypeCodeType": {
+                    "$ref": "#/definitions/AddressTypeCodeType"
+                },
+                "adjustmentReasonCodeType": {
+                    "$ref": "#/definitions/AdjustmentReasonCodeType"
+                },
+                "airFlowUnitMeasureType": {
+                    "$ref": "#/definitions/AirFlowUnitMeasureType"
+                },
+                "allowanceChargeIdentificationCodeType": {
+                    "$ref": "#/definitions/AllowanceChargeIdentificationCodeType"
+                },
+                "allowanceChargeReasonCodeType": {
+                    "$ref": "#/definitions/AllowanceChargeReasonCodeType"
+                },
+                "alternateCurrencyAmountTypeCodeType": {
+                    "$ref": "#/definitions/AlternateCurrencyAmountTypeCodeType"
+                },
+                "amortizationMethodCodeType": {
+                    "$ref": "#/definitions/AmortizationMethodCodeType"
+                },
+                "amountWeightTypeCodeType": {
+                    "$ref": "#/definitions/AmountWeightTypeCodeType"
+                },
+                "automaticDataCaptureMethodCodeType": {
+                    "$ref": "#/definitions/AutomaticDataCaptureMethodCodeType"
+                },
+                "binaryObjectCharacterSetCodeType": {
+                    "$ref": "#/definitions/BinaryObjectCharacterSetCodeType"
+                },
+                "binaryObjectEncodingCodeType": {
+                    "$ref": "#/definitions/BinaryObjectEncodingCodeType"
+                },
+                "cargoCategoryCodeType": {
+                    "$ref": "#/definitions/CargoCategoryCodeType"
+                },
+                "cargoCommodityCategoryCodeType": {
+                    "$ref": "#/definitions/CargoCommodityCategoryCodeType"
+                },
+                "cargoOperationalCategoryCodeType": {
+                    "$ref": "#/definitions/CargoOperationalCategoryCodeType"
+                },
+                "cargoTypeClassificationCodeType": {
+                    "$ref": "#/definitions/CargoTypeClassificationCodeType"
+                },
+                "cashAccountTypeCodeType": {
+                    "$ref": "#/definitions/CashAccountTypeCodeType"
+                },
+                "certificateTypeCodeType": {
+                    "$ref": "#/definitions/CertificateTypeCodeType"
+                },
+                "chargePayingPartyRoleCodeType": {
+                    "$ref": "#/definitions/ChargePayingPartyRoleCodeType"
+                },
+                "codeListResponsibleAgencyCodeType": {
+                    "$ref": "#/definitions/CodeListResponsibleAgencyCodeType"
+                },
+                "commitmentLevelCodeType": {
+                    "$ref": "#/definitions/CommitmentLevelCodeType"
+                },
+                "communicationChannelCodeType": {
+                    "$ref": "#/definitions/CommunicationChannelCodeType"
+                },
+                "contactTypeCodeType": {
+                    "$ref": "#/definitions/ContactTypeCodeType"
+                },
+                "contractTypeCodeType": {
+                    "$ref": "#/definitions/ContractTypeCodeType"
+                },
+                "contractorTypeCodeType": {
+                    "$ref": "#/definitions/ContractorTypeCodeType"
+                },
+                "costManagementCodeType": {
+                    "$ref": "#/definitions/CostManagementCodeType"
+                },
+                "costReportingCodeType": {
+                    "$ref": "#/definitions/CostReportingCodeType"
+                },
+                "countryIDType": {
+                    "$ref": "#/definitions/CountryIDType"
+                },
+                "currencyCodeType": {
+                    "$ref": "#/definitions/CurrencyCodeType"
+                },
+                "dangerousGoodsPackagingLevelCodeType": {
+                    "$ref": "#/definitions/DangerousGoodsPackagingLevelCodeType"
+                },
+                "dangerousGoodsRegulationCodeType": {
+                    "$ref": "#/definitions/DangerousGoodsRegulationCodeType"
+                },
+                "deliveryTermsCodeType": {
+                    "$ref": "#/definitions/DeliveryTermsCodeType"
+                },
+                "dimensionTypeCodeType": {
+                    "$ref": "#/definitions/DimensionTypeCodeType"
+                },
+                "documentCodeType": {
+                    "$ref": "#/definitions/DocumentCodeType"
+                },
+                "documentStatusCodeType": {
+                    "$ref": "#/definitions/DocumentStatusCodeType"
+                },
+                "durationUnitMeasureType": {
+                    "$ref": "#/definitions/DurationUnitMeasureType"
+                },
+                "earnedValueCalculationMethodCodeType": {
+                    "$ref": "#/definitions/EarnedValueCalculationMethodCodeType"
+                },
+                "fileSizeUnitMeasureType": {
+                    "$ref": "#/definitions/FileSizeUnitMeasureType"
+                },
+                "financialAccountTypeCodeType": {
+                    "$ref": "#/definitions/FinancialAccountTypeCodeType"
+                },
+                "financialAdjustmentReasonCodeType": {
+                    "$ref": "#/definitions/FinancialAdjustmentReasonCodeType"
+                },
+                "financialInstitutionRoleCodeType": {
+                    "$ref": "#/definitions/FinancialInstitutionRoleCodeType"
+                },
+                "financingStatusCodeType": {
+                    "$ref": "#/definitions/FinancingStatusCodeType"
+                },
+                "financingStatusReasonCodeType": {
+                    "$ref": "#/definitions/FinancingStatusReasonCodeType"
+                },
+                "formattedDateTimeType": {
+                    "$ref": "#/definitions/FormattedDateTimeType"
+                },
+                "freightChargeTariffClassCodeType": {
+                    "$ref": "#/definitions/FreightChargeTariffClassCodeType"
+                },
+                "freightChargeTypeIDType": {
+                    "$ref": "#/definitions/FreightChargeTypeIDType"
+                },
+                "fundingTypeCodeType": {
+                    "$ref": "#/definitions/FundingTypeCodeType"
+                },
+                "goodsTypeCodeType": {
+                    "$ref": "#/definitions/GoodsTypeCodeType"
+                },
+                "goodsTypeExtensionCodeType": {
+                    "$ref": "#/definitions/GoodsTypeExtensionCodeType"
+                },
+                "governmentActionCodeType": {
+                    "$ref": "#/definitions/GovernmentActionCodeType"
+                },
+                "hierarchicalStructureTypeCodeType": {
+                    "$ref": "#/definitions/HierarchicalStructureTypeCodeType"
+                },
+                "invoiceDocumentCodeType": {
+                    "$ref": "#/definitions/InvoiceDocumentCodeType"
+                },
+                "languageCodeType": {
+                    "$ref": "#/definitions/LanguageCodeType"
+                },
+                "lifetimeEndCostCodeType": {
+                    "$ref": "#/definitions/LifetimeEndCostCodeType"
+                },
+                "lineStatusCodeType": {
+                    "$ref": "#/definitions/LineStatusCodeType"
+                },
+                "linearUnitMeasureType": {
+                    "$ref": "#/definitions/LinearUnitMeasureType"
+                },
+                "locationFunctionCodeType": {
+                    "$ref": "#/definitions/LocationFunctionCodeType"
+                },
+                "logisticsChargeCalculationBasisCodeType": {
+                    "$ref": "#/definitions/LogisticsChargeCalculationBasisCodeType"
+                },
+                "mIMECodeType": {
+                    "$ref": "#/definitions/MIMECodeType"
+                },
+                "markingInstructionCodeType": {
+                    "$ref": "#/definitions/MarkingInstructionCodeType"
+                },
+                "measuredAttributeCodeType": {
+                    "$ref": "#/definitions/MeasuredAttributeCodeType"
+                },
+                "messageFunctionCodeType": {
+                    "$ref": "#/definitions/MessageFunctionCodeType"
+                },
+                "organizationFunctionTypeCodeType": {
+                    "$ref": "#/definitions/OrganizationFunctionTypeCodeType"
+                },
+                "packageTypeCodeType": {
+                    "$ref": "#/definitions/PackageTypeCodeType"
+                },
+                "packagingLevelCodeType": {
+                    "$ref": "#/definitions/PackagingLevelCodeType"
+                },
+                "packagingMarkingCodeType": {
+                    "$ref": "#/definitions/PackagingMarkingCodeType"
+                },
+                "partyRoleCodeType": {
+                    "$ref": "#/definitions/PartyRoleCodeType"
+                },
+                "partyTypeCodeType": {
+                    "$ref": "#/definitions/PartyTypeCodeType"
+                },
+                "paymentGuaranteeMeansCodeType": {
+                    "$ref": "#/definitions/PaymentGuaranteeMeansCodeType"
+                },
+                "paymentMeansChannelCodeType": {
+                    "$ref": "#/definitions/PaymentMeansChannelCodeType"
+                },
+                "paymentMeansCodeType": {
+                    "$ref": "#/definitions/PaymentMeansCodeType"
+                },
+                "paymentMethodCodeType": {
+                    "$ref": "#/definitions/PaymentMethodCodeType"
+                },
+                "paymentTermsEventTimeReferenceCodeType": {
+                    "$ref": "#/definitions/PaymentTermsEventTimeReferenceCodeType"
+                },
+                "paymentTermsIDType": {
+                    "$ref": "#/definitions/PaymentTermsIDType"
+                },
+                "paymentTermsTypeCodeType": {
+                    "$ref": "#/definitions/PaymentTermsTypeCodeType"
+                },
+                "planningLevelCodeType": {
+                    "$ref": "#/definitions/PlanningLevelCodeType"
+                },
+                "priceTypeCodeType": {
+                    "$ref": "#/definitions/PriceTypeCodeType"
+                },
+                "priorityDescriptionCodeType": {
+                    "$ref": "#/definitions/PriorityDescriptionCodeType"
+                },
+                "processTypeCodeType": {
+                    "$ref": "#/definitions/ProcessTypeCodeType"
+                },
+                "projectTypeCodeType": {
+                    "$ref": "#/definitions/ProjectTypeCodeType"
+                },
+                "quotationDocumentCodeType": {
+                    "$ref": "#/definitions/QuotationDocumentCodeType"
+                },
+                "referenceCodeType": {
+                    "$ref": "#/definitions/ReferenceCodeType"
+                },
+                "refundMethodCodeType": {
+                    "$ref": "#/definitions/RefundMethodCodeType"
+                },
+                "remittanceDocumentCodeType": {
+                    "$ref": "#/definitions/RemittanceDocumentCodeType"
+                },
+                "reportingThresholdTriggerTypeCodeType": {
+                    "$ref": "#/definitions/ReportingThresholdTriggerTypeCodeType"
+                },
+                "resourceCostCategoryCodeType": {
+                    "$ref": "#/definitions/ResourceCostCategoryCodeType"
+                },
+                "resourcePlanMeasureTypeCodeType": {
+                    "$ref": "#/definitions/ResourcePlanMeasureTypeCodeType"
+                },
+                "responseTypeCodeType": {
+                    "$ref": "#/definitions/ResponseTypeCodeType"
+                },
+                "scenarioTypeCodeType": {
+                    "$ref": "#/definitions/ScenarioTypeCodeType"
+                },
+                "scheduleTaskRelationshipTypeCodeType": {
+                    "$ref": "#/definitions/ScheduleTaskRelationshipTypeCodeType"
+                },
+                "scheduleTaskTypeCodeType": {
+                    "$ref": "#/definitions/ScheduleTaskTypeCodeType"
+                },
+                "scheduleTypeCodeType": {
+                    "$ref": "#/definitions/ScheduleTypeCodeType"
+                },
+                "schedulingDocumentCodeType": {
+                    "$ref": "#/definitions/SchedulingDocumentCodeType"
+                },
+                "sealConditionCodeType": {
+                    "$ref": "#/definitions/SealConditionCodeType"
+                },
+                "sealTypeCodeType": {
+                    "$ref": "#/definitions/SealTypeCodeType"
+                },
+                "sealingPartyRoleCodeType": {
+                    "$ref": "#/definitions/SealingPartyRoleCodeType"
+                },
+                "securityClassificationTypeCodeType": {
+                    "$ref": "#/definitions/SecurityClassificationTypeCodeType"
+                },
+                "softwareUserTypeCodeType": {
+                    "$ref": "#/definitions/SoftwareUserTypeCodeType"
+                },
+                "statusCodeType": {
+                    "$ref": "#/definitions/StatusCodeType"
+                },
+                "subjectCodeType": {
+                    "$ref": "#/definitions/SubjectCodeType"
+                },
+                "taxCategoryCodeType": {
+                    "$ref": "#/definitions/TaxCategoryCodeType"
+                },
+                "taxExemptionReasonCodeType": {
+                    "$ref": "#/definitions/TaxExemptionReasonCodeType"
+                },
+                "taxTypeCodeType": {
+                    "$ref": "#/definitions/TaxTypeCodeType"
+                },
+                "temperatureTypeCodeType": {
+                    "$ref": "#/definitions/TemperatureTypeCodeType"
+                },
+                "temperatureUnitMeasureType": {
+                    "$ref": "#/definitions/TemperatureUnitMeasureType"
+                },
+                "timeOnlyFormattedDateTimeType": {
+                    "$ref": "#/definitions/TimeOnlyFormattedDateTimeType"
+                },
+                "timeReferenceCodeType": {
+                    "$ref": "#/definitions/TimeReferenceCodeType"
+                },
+                "titleCodeType": {
+                    "$ref": "#/definitions/TitleCodeType"
+                },
+                "transportEquipmentCategoryCodeType": {
+                    "$ref": "#/definitions/TransportEquipmentCategoryCodeType"
+                },
+                "transportEquipmentFullnessCodeType": {
+                    "$ref": "#/definitions/TransportEquipmentFullnessCodeType"
+                },
+                "transportEquipmentSizeTypeCodeType": {
+                    "$ref": "#/definitions/TransportEquipmentSizeTypeCodeType"
+                },
+                "transportMeansTypeCodeType": {
+                    "$ref": "#/definitions/TransportMeansTypeCodeType"
+                },
+                "transportModeCodeType": {
+                    "$ref": "#/definitions/TransportModeCodeType"
+                },
+                "transportMovementStageCodeType": {
+                    "$ref": "#/definitions/TransportMovementStageCodeType"
+                },
+                "transportServicePaymentArrangementCodeType": {
+                    "$ref": "#/definitions/TransportServicePaymentArrangementCodeType"
+                },
+                "unitMeasureType": {
+                    "$ref": "#/definitions/UnitMeasureType"
+                },
+                "volumeUnitMeasureType": {
+                    "$ref": "#/definitions/VolumeUnitMeasureType"
+                },
+                "weightUnitMeasureType": {
+                    "$ref": "#/definitions/WeightUnitMeasureType"
+                },
+                "workflowStatusCodeType": {
+                    "$ref": "#/definitions/WorkflowStatusCodeType"
+                }
+            },
+            "type": "object"
+        },
+        "QuotationDocumentCodeType": {
+            "type": "object"
+        },
+        "ReferenceCodeType": {
+            "type": "object"
+        },
+        "RefundMethodCodeType": {
+            "type": "object"
+        },
+        "RemittanceDocumentCodeType": {
+            "type": "object"
+        },
+        "ReportingThresholdTriggerTypeCodeType": {
+            "type": "object"
+        },
+        "ResourceCostCategoryCodeType": {
+            "type": "object"
+        },
+        "ResourcePlanMeasureTypeCodeType": {
+            "type": "object"
+        },
+        "ResponseTypeCodeType": {
+            "type": "object"
+        },
+        "ScenarioTypeCodeType": {
+            "type": "object"
+        },
+        "ScheduleTaskRelationshipTypeCodeType": {
+            "type": "object"
+        },
+        "ScheduleTaskTypeCodeType": {
+            "type": "object"
+        },
+        "ScheduleTypeCodeType": {
+            "type": "object"
+        },
+        "SchedulingDocumentCodeType": {
+            "type": "object"
+        },
+        "SealConditionCodeType": {
+            "type": "object"
+        },
+        "SealTypeCodeType": {
+            "type": "object"
+        },
+        "SealingPartyRoleCodeType": {
+            "type": "object"
+        },
+        "SecurityClassificationTypeCodeType": {
+            "type": "object"
+        },
+        "SoftwareUserTypeCodeType": {
+            "type": "object"
+        },
+        "StatusCodeType": {
+            "type": "object"
+        },
+        "SubjectCodeType": {
+            "type": "object"
+        },
+        "TaxCategoryCodeType": {
+            "type": "object"
+        },
+        "TaxExemptionReasonCodeType": {
+            "type": "object"
+        },
+        "TaxTypeCodeType": {
+            "type": "object"
+        },
+        "TemperatureTypeCodeType": {
+            "type": "object"
+        },
+        "TemperatureUnitMeasureType": {
+            "type": "object"
+        },
+        "TimeOnlyFormattedDateTimeType": {
+            "type": "object"
+        },
+        "TimeReferenceCodeType": {
+            "type": "object"
+        },
+        "TitleCodeType": {
+            "type": "object"
+        },
+        "TransportEquipmentCategoryCodeType": {
+            "type": "object"
+        },
+        "TransportEquipmentFullnessCodeType": {
+            "type": "object"
+        },
+        "TransportEquipmentSizeTypeCodeType": {
+            "type": "object"
+        },
+        "TransportMeansTypeCodeType": {
+            "type": "object"
+        },
+        "TransportModeCodeType": {
+            "type": "object"
+        },
+        "TransportMovementStageCodeType": {
+            "type": "object"
+        },
+        "TransportServicePaymentArrangementCodeType": {
+            "type": "object"
+        },
+        "UnitMeasureType": {
+            "type": "object"
+        },
+        "VolumeUnitMeasureType": {
+            "type": "object"
+        },
+        "WeightUnitMeasureType": {
+            "type": "object"
+        },
+        "WorkflowStatusCodeType": {
+            "type": "object"
+        }
+    }
+}
+
