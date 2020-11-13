@@ -37,12 +37,12 @@ This module contains a few utility files:
 
 The module will return an array with two members:  The XML for this Blockly category, and a concatenated string of all the files that were parsed.
 
-##bloccoliBuilder
+##XMLBuilder
 
-Wraps moduleMaker  in such a way that it's ready to add directly into [Bloccoli](http://bloccoli.org)'s blocks folder, allowing it to be added to any project on the site.
+Wraps moduleMaker  in such a way that it's ready to add directly into [Bloccoli](http://XML.org)'s blocks folder, allowing it to be added to any project on the site.
 
-##bloccoliBuilderCli
-Does the same thing as the `bloccoliBuilder`, but can be called from the command line and piped into a file.
+##XMLBuilderCli
+Does the same thing as the `XMLBuilder`, but can be called from the command line and piped into a file.
 
 These operations are all done synchronously, so it is probably not best to do on the fly by its current design.
 

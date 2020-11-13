@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-var builder = require('./bloccoliBuilder');
+var builder = require('./XMLBuilder');
 
 var requestedFolder = process.argv[2];
 
