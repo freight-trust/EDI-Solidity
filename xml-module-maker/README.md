@@ -27,23 +27,23 @@ Blockly XML trees are pretty dense, and if you're making a big set of blocks, ad
       </category>
     </xml>
 
-This [Node.js](http://nodejs.org/) module allows you to point to a folder.  That folder name will be treated as the root category name.  Each contained folder recursively will be a new category within that category, and each file contained within will be added as a block to the XML tree.
+This [Node.js](http://nodejs.org/) module allows you to point to a folder. That folder name will be treated as the root category name. Each contained folder recursively will be a new category within that category, and each file contained within will be added as a block to the XML tree.
 
-Please note folders that contain folders are automatically "category folders", and will not display any blocks.  This is a limitation of Blockly proper, not of this script.
+Please note folders that contain folders are automatically "category folders", and will not display any blocks. This is a limitation of Blockly proper, not of this script.
 
 This module contains a few utility files:
 
 ##moduleMaker
 
-The module will return an array with two members:  The XML for this Blockly category, and a concatenated string of all the files that were parsed.
+The module will return an array with two members: The XML for this Blockly category, and a concatenated string of all the files that were parsed.
 
 ##XMLBuilder
 
-Wraps moduleMaker  in such a way that it's ready to add directly into [Bloccoli](http://XML.org)'s blocks folder, allowing it to be added to any project on the site.
+Wraps moduleMaker in such a way that it's ready to add directly into [Bloccoli](http://XML.org)'s blocks folder, allowing it to be added to any project on the site.
 
 ##XMLBuilderCli
 Does the same thing as the `XMLBuilder`, but can be called from the command line and piped into a file.
 
 These operations are all done synchronously, so it is probably not best to do on the fly by its current design.
 
-I've included a "helpUrl" generator in this module.  If you include a file called 'help' in any of the folders, with a URL string inside it, that URL will be used as the default help URL for blocks inside that folder, and folders inside it, etc.
+I've included a "helpUrl" generator in this module. If you include a file called 'help' in any of the folders, with a URL string inside it, that URL will be used as the default help URL for blocks inside that folder, and folders inside it, etc.

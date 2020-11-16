@@ -1,0 +1,15 @@
+type = tuple_type / basic_type
+tuple_type = components arrlist?
+components = non_zero_tuple / zero_tuple
+non_zero_tuple = "(" type next_type* ")"
+next_type = "," type
+zero_tuple = "()"
+basic_type = base sub? arrlist?
+base = alphas
+sub = two_size / digits
+two_size = (digits "x" digits)
+arrlist = (const_arr / dynam_arr)+
+const_arr = "[" digits "]"
+dynam_arr = "[]"
+alphas = ~"[A-Za-z]+"
+digits = ~"[1-9][0-9]*"

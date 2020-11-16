@@ -1,0 +1,8 @@
+{
+    "int": "int256",
+    "uint": "uint256",
+    "fixed": "fixed128x18",
+    "ufixed": "ufixed128x18",
+    "function": "bytes24",
+    "byte": "bytes1"
+}

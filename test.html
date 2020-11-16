@@ -1,77 +1,113 @@
-<!DOCTYPE HTML>
-<html>
- <head>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/spacelab/bootstrap.min.css" integrity="sha384-F1AY0h4TrtJ8OCUQYOzhcFzUTxSOxuaaJ4BeagvyQL8N9mE4hrXjdDsNx249NpEc" crossorigin="anonymous">
-  <title>Live DOM Viewer</title>
-  <style>
-   h1 { margin: 0; }
-   h2 { font-size: small; margin: 1em 0 0; }
-   p, ul, pre { margin: 0; }
-   p { border: inset thin; }
-   textarea { width: 100%; -width: 99%; height: 8em; border: 0; }
-   iframe { width: 100%; height: 12em; border: 0; }
-/* iframe.large { height: 24em; } */
-   pre { border: inset thin; padding: 0.5em; color: gray; }
-   pre samp { color: black; }
-   #dom { border: inset thin; padding: 0.5em 0.5em 0.5em 1em; color: black; min-height: 5em; font-family: monospace; background: white; }
-   #dom ul { padding: 0 0 0 1em; margin: 0; }
-   #dom li { padding: 0; margin: 0; list-style: none; position: relative; }
-   #dom li li { list-style: disc; }
-   #dom .t1 code { color: purple; font-weight: bold; }
-   #dom .t2 { font-style: normal; font-family: monospace; }
-   #dom .t2 .name { color: black; font-weight: bold; }
-   #dom .t2 .value { color: blue; font-weight: normal; }
-   #dom .t3 code, #dom .t4 code, #dom .t5 code { color: gray; }
-   #dom .t7 code, #dom .t8 code { color: green; }
-   #dom span { font-style: italic; font-family: serif; }
-   #dom .t10 code { color: teal; }
-   #dom .misparented, #dom .misparented code { color: red; font-weight: bold; }
-   #dom .unnamed { color: red; font-style: italic; }
-   #dom .template { padding: 0 0 0 1.5em; background: #EEEEEE; color: black; position: relative; overflow: hidden; }
-   #dom .template::after { position: absolute; top: 1em; right: -2.6em; content: 'TEMPLATE'; width: 10em; text-align: center; transform: rotate(30deg); background: black; color: white; }
-   #dom.hidden, .hidden { visibility: hidden; margin: 0.5em 0; padding: 0; height: 0; min-height: 0; }
-   pre#log { color: black; font: small monospace; }
-   script + p { border: none; font-size: smaller; margin: 0.8em 0.25em 0.1em; }
-   script + p + details { font-size: smaller; margin: 0 0.25em; }
-   script + p + details dl { margin: 0 0 0 1.5em; }
-   script + p + details dl dd { margin: 0 0 0.35em 1em; }
-  </style>
-  <style title="Tree View">
-   #dom li li { list-style: none; }
-   #dom li:first-child::before { position: absolute; top: 0; height: 0.7em; left: -0.75em; width: 0.5em; border-style: none none solid solid; content: ''; border-width: 0.1em; }
-   #dom li:not(:last-child)::after { position: absolute; top: 0; bottom: -0.7em; left: -0.75em; width: 0.5em; border-style: none none solid solid; content: ''; border-width: 0.1em; }
-  </style>
-  <script>
-   if (navigator.userAgent.match('Gecko/(\\d+)') && RegExp.$1 == '20060217' && RegExp.$1 != '00000000') {
-     var style = document.getElementsByTagName('style')[1];
-     style.parentNode.removeChild(style);
-   }
-  </script>
-      <link href="navbar-top.css" rel="stylesheet">
- </head>
- <body onload="init()">
-   <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-      <a class="navbar-brand" href="#">Electronic Data Interchange</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </nav>
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+        h1 { margin: 0; }
+        h2 { font-size: small; margin: 1em 0 0; }
+        p, ul, pre { margin: 0; }
+        p { border: inset thin; }
+        textarea { width: 100%; -width: 99%; height: 8em; border: 0; }
+        iframe { width: 100%; height: 12em; border: 0; }
+     /* iframe.large { height: 24em; } */
+        pre { border: inset thin; padding: 0.5em; color: gray; }
+        pre samp { color: black; }
+        #dom { border: inset thin; padding: 0.5em 0.5em 0.5em 1em; color: black; min-height: 5em; font-family: monospace; background: white; }
+        #dom ul { padding: 0 0 0 1em; margin: 0; }
+        #dom li { padding: 0; margin: 0; list-style: none; position: relative; }
+        #dom li li { list-style: disc; }
+        #dom .t1 code { color: purple; font-weight: bold; }
+        #dom .t2 { font-style: normal; font-family: monospace; }
+        #dom .t2 .name { color: black; font-weight: bold; }
+        #dom .t2 .value { color: blue; font-weight: normal; }
+        #dom .t3 code, #dom .t4 code, #dom .t5 code { color: gray; }
+        #dom .t7 code, #dom .t8 code { color: green; }
+        #dom span { font-style: italic; font-family: serif; }
+        #dom .t10 code { color: teal; }
+        #dom .misparented, #dom .misparented code { color: red; font-weight: bold; }
+        #dom .unnamed { color: red; font-style: italic; }
+        #dom .template { padding: 0 0 0 1.5em; background: #EEEEEE; color: black; position: relative; overflow: hidden; }
+        #dom .template::after { position: absolute; top: 1em; right: -2.6em; content: 'TEMPLATE'; width: 10em; text-align: center; transform: rotate(30deg); background: black; color: white; }
+        #dom.hidden, .hidden { visibility: hidden; margin: 0.5em 0; padding: 0; height: 0; min-height: 0; }
+        pre#log { color: black; font: small monospace; }
+        script + p { border: none; font-size: smaller; margin: 0.8em 0.25em 0.1em; }
+        script + p + details { font-size: smaller; margin: 0 0.25em; }
+        script + p + details dl { margin: 0 0 0 1.5em; }
+        script + p + details dl dd { margin: 0 0 0.35em 1em; }
+       </style>
+       <style title="Tree View">
+        #dom li li { list-style: none; }
+        #dom li:first-child::before { position: absolute; top: 0; height: 0.7em; left: -0.75em; width: 0.5em; border-style: none none solid solid; content: ''; border-width: 0.1em; }
+        #dom li:not(:last-child)::after { position: absolute; top: 0; bottom: -0.7em; left: -0.75em; width: 0.5em; border-style: none none solid solid; content: ''; border-width: 0.1em; }
+       </style>
+       <script>
+        if (navigator.userAgent.match('Gecko/(\\d+)') && RegExp.$1 == '20060217' && RegExp.$1 != '00000000') {
+          var style = document.getElementsByTagName('style')[1];
+          style.parentNode.removeChild(style);
+        }
+       </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Top navbar example · Bootstrap</title>
 
-   <main role="main" class="container">
-      <div class="jumbotron">
-        <h1>EDI AST/DOM </h1>
-        <br />
-        <p class="lead">
-           Data Interchange Mapping Suite 
-        </p>
-        <br />
-        <a class="btn btn-medium btn-primary" href="#" role="button">See Example&raquo;</a>
-      </div>
-    </main>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbar-static/">
 
-  
-  <div class="container">
-   <div class="col-md-12">
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="navbar-top.css" rel="stylesheet">
+  </head>
+  <body onload="init()">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <a class="navbar-brand" href="#">Top navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<main role="main" class="container">
+  <div class="jumbotron">
+    <h1>Navbar example</h1>
+    <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+    <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs &raquo;</a>
+  </div>
+
   <h2>Markup to test (<a href="data:," id="permalink" rel="bookmark">permalink</a>, <a href="javascript:save()" id="save">save</a>, <a href="javascript:up()">upload</a>, <a href="javascript:down()">download</a>, <!--<a href="javascript:filetestbug()" title="Files the test in the W3C HTML bug database as a testsuite bug">bug</a>,--> <a href="#" onclick="toggleVisibility(this); return false">hide</a>): <span id="network-status"></span></h2>
   <p><textarea oninput="updateInput(event)" onkeydown="updateInput(event)">&lt;!DOCTYPE html>
 ...</textarea></p>
@@ -358,33 +394,7 @@
      }
    }
   </script>
-  <p>This script puts a function <code>w(<var>s</var>)</code> into the
-  global scope of the test page, where <var>s</vaR> is a string or
-  object to output to the log.</p>
-  <details onclick="setTimeout(function () { this.getElementsByTagName('summary')[0].textContent = this.open ? 'Some files are available for testing purposes:' : 'Some files are available for testing purposes, notably &quot;image&quot; is an image.' }.bind(this), 0)">
-    <summary>Some files are available for testing purposes, notably "image" is an image.</summary>
-    <dl>
-     <dt> <code>image</code> and <code>image.swf</code> <dd> a GIF image of two cats
-     <dt> <code>null</code> <dd> a PNG image of the word "null"
-     <dt> <code>flash</code> <dd> a Flash file
-     <dt> <code>flash-as-text</code> and <code>flash-as-text.swf</code> <dd> a Flash file sent as text/plain
-     <dt> <code>flash-as-image.swf</code> <dd> a Flash file sent as image/gif
-     <dt> <code>script</code> <dd> a JS file
-     <dt> <code>style</code> <dd> a CSS file
-     <dt> <code>document</code> <dd> an HTML file
-     <dt> <code>alertdoc</code> <dd> an HTML file with a script that alerts
-     <dt> <code>delayed-image</code> <dd> a GIF image after a two-second pause
-     <dt> <code>delayed-script</code> <dd> a JS file after a two-second pause
-     <dt> <code>xhtml</code> <dd> an XHTML file
-     <dt> <code>xml</code> <dd> an XML file
-     <dt> <code>xml-as-svg</code> <dd> an XML file sent with the SVG MIME type
-     <dt> <code>xml-broken</code> <dd> a malformed XML file
-     <dt> <code>svg</code> <dd> an SVG file
-     <dt> <code>svg-as-xml</code> <dd> an SVG file sent with the XML MIME type
-     <dt> <code>download</code> <dd> the same file as <code>image</code>, but with a Content-Disposition header set to <code>inline</code> with a filename
-    </dl>
-  </details>
-  </div>
-  </div>
- </body>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 </html>
