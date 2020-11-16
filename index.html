@@ -358,33 +358,5 @@
      }
    }
   </script>
-  <p>This script puts a function <code>w(<var>s</var>)</code> into the
-  global scope of the test page, where <var>s</vaR> is a string or
-  object to output to the log.</p>
-  <details onclick="setTimeout(function () { this.getElementsByTagName('summary')[0].textContent = this.open ? 'Some files are available for testing purposes:' : 'Some files are available for testing purposes, notably &quot;image&quot; is an image.' }.bind(this), 0)">
-    <summary>Some files are available for testing purposes, notably "image" is an image.</summary>
-    <dl>
-     <dt> <code>image</code> and <code>image.swf</code> <dd> a GIF image of two cats
-     <dt> <code>null</code> <dd> a PNG image of the word "null"
-     <dt> <code>flash</code> <dd> a Flash file
-     <dt> <code>flash-as-text</code> and <code>flash-as-text.swf</code> <dd> a Flash file sent as text/plain
-     <dt> <code>flash-as-image.swf</code> <dd> a Flash file sent as image/gif
-     <dt> <code>script</code> <dd> a JS file
-     <dt> <code>style</code> <dd> a CSS file
-     <dt> <code>document</code> <dd> an HTML file
-     <dt> <code>alertdoc</code> <dd> an HTML file with a script that alerts
-     <dt> <code>delayed-image</code> <dd> a GIF image after a two-second pause
-     <dt> <code>delayed-script</code> <dd> a JS file after a two-second pause
-     <dt> <code>xhtml</code> <dd> an XHTML file
-     <dt> <code>xml</code> <dd> an XML file
-     <dt> <code>xml-as-svg</code> <dd> an XML file sent with the SVG MIME type
-     <dt> <code>xml-broken</code> <dd> a malformed XML file
-     <dt> <code>svg</code> <dd> an SVG file
-     <dt> <code>svg-as-xml</code> <dd> an SVG file sent with the XML MIME type
-     <dt> <code>download</code> <dd> the same file as <code>image</code>, but with a Content-Disposition header set to <code>inline</code> with a filename
-    </dl>
-  </details>
-  </div>
-  </div>
  </body>
 </html>
